@@ -1,0 +1,61 @@
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+#product-list {
+  padding: 20px;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding-bottom: 1%; /*change padding to padding bottom*/
+  width: 30%;
+  text-align: center;
+  /*horizontal fix*/
+  margin: 20px;
+  clear: none;
+  float: left;
+}
+
+/* Pseudo-classes for link behavior and order with errors */
+.product a {
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+}
+
+/*visited*/
+a:visited {
+  color: purple;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Clear floats to avoid parent collapse */
+#product-list::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Please use google to find out what this block of code is and why it is being used in this code */
+/*
+  content "" (empty string) considers the list an entity, so footer clears below, other content values let footer overlap background and lets footer text fill in-line next to it
+  display table lets list be only as wide as product's width and margins
+  clear separates itself from header and footer
+*/
